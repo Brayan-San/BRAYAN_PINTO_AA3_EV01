@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- Versión del modelo de Maven utilizada -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Configuración del padre del proyecto, en este caso el parent es Spring Boot -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.1.5</version> <!-- Versión de Spring Boot -->
+        <relativePath/> <!-- Busca el parent desde el repositorio Maven -->
+    </parent>
+
+    <!-- Información del proyecto -->
+    <groupId>com.example</groupId> <!-- El ID del grupo, define el paquete base -->
+    <artifactId>BDFW</artifactId> <!-- Nombre del artefacto del proyecto -->
+    <version>0.0.1-SNAPSHOT</version> <!-- Versión del proyecto -->
+    <name>BDFW</name> <!-- Nombre del proyecto -->
+    <description>Demo project for Spring Boot</description> <!-- Descripción del proyecto -->
+
+    <!-- Propiedades del proyecto -->
+    <properties>
+        <java.version>17</java.version> <!-- Especifica la versión de Java utilizada (Java 17) -->
+    </properties>
+
+    <!-- Dependencias del proyecto -->
+    <dependencies>
+        <!-- Starter de Thymeleaf, necesario para la gestión de plantillas HTML -->
+        <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <!-- Starter de Spring Data JPA, utilizado para interactuar con bases de datos relacionales -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- Starter de Spring Web, para la creación de controladores web y API REST -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Conector de MySQL, necesario para la conexión a la base de datos MySQL -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <scope>runtime</scope> <!-- Solo se necesita en tiempo de ejecución -->
+        </dependency>
+
+        <!-- Librería Lombok, facilita la generación automática de getters, setters, constructores, etc. -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional> <!-- Es opcional, pero útil para reducir código repetitivo -->
+        </dependency>
+
+        <!-- Starter para realizar pruebas dentro del proyecto -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope> <!-- Esta dependencia se utiliza solo para pruebas -->
+        </dependency>
+    </dependencies>
+
+    <!-- Configuración del build -->
+    <build>
+        <plugins>
+            <!-- Plugin de Spring Boot para la creación del empaquetado (jar/war) y ejecución -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!-- Excluye Lombok del empaquetado si es necesario -->
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

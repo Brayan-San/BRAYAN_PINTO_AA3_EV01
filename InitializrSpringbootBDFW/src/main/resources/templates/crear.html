@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Crear Proveedor</title>
+    <!-- Vincula la hoja de estilos CSS -->
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <!-- Título de la página -->
+    <h1>Crear Proveedor</h1>
+    <!-- Formulario para crear un nuevo proveedor -->
+    <form th:action="@{/proveedores/Guardar}" th:object="${proveedor}" method="post">
+        <!-- Campo para el nombre del proveedor -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" th:field="*{nombre}" required><br>
+
+        <!-- Campo para la dirección del proveedor -->
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" th:field="*{direccion}" required><br>
+
+        <!-- Campo para el correo del proveedor -->
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" th:field="*{correo}" required><br>
+
+        <!-- Campo para el tipo de teléfono del proveedor -->
+        <label for="tipoTelefono">Tipo de Teléfono:</label>
+        <input type="text" id="tipoTelefono" th:field="*{tipoTelefono}" required><br>
+
+        <!-- Campo para el teléfono del proveedor -->
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" th:field="*{telefono}" required><br>
+
+        <!-- Campo para el tipo de producto -->
+        <label for="tipoProducto">Tipo de Producto:</label>
+        <input type="text" id="tipoProducto" th:field="*{tipoProducto}" required><br>
+
+        <!-- Campo para el nombre del producto -->
+        <label for="nombreProducto">Nombre del Producto:</label>
+        <input type="text" id="nombreProducto" th:field="*{nombreProducto}" />
+
+        <!-- Enlace para volver a la lista de proveedores -->
+        <a href="/proveedores/Listar">Volver a la Lista</a>
+        
+        <!-- Botón para enviar el formulario -->
+        <button type="submit">Guardar</button>
+        
+    </form>
+</body>
+</html>
+

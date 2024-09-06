@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Proveedores</title>
+    <!-- Vincula la hoja de estilos CSS -->
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <div class="container">
+        <!-- Título de la página -->
+        <h1>Lista de Proveedores</h1>
+        <!-- Tabla para mostrar los proveedores -->
+        <table>
+            <tr>
+                <!-- Encabezados de la tabla -->
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Dirección</th>
+                <th>Correo</th>
+                <th>Tipo de Teléfono</th>
+                <th>Teléfono</th>
+                <th>Tipo de Producto</th>
+                <th>Nombre del Producto</th>
+                <th>Acciones</th> <!-- Columna para acciones como editar o eliminar -->
+            </tr>
+            <!-- Bucle para recorrer y mostrar la lista de proveedores -->
+            <tr th:each="proveedor : ${proveedores}">
+                <!-- Datos de cada proveedor -->
+                <td th:text="${proveedor.id}">ID</td>
+                <td th:text="${proveedor.nombre}">Nombre</td>
+                <td th:text="${proveedor.direccion}">Dirección</td>
+                <td th:text="${proveedor.correo}">Correo</td>
+                <td th:text="${proveedor.tipoTelefono}">Tipo de Teléfono</td>
+                <td th:text="${proveedor.telefono}">Teléfono</td>
+                <td th:text="${proveedor.tipoProducto}">Tipo de Producto</td>
+                <td th:text="${proveedor.nombreProducto}">Nombre del Producto</td>
+                <!-- Enlaces para las acciones de editar y eliminar -->
+                <td>
+                    <a th:href="@{/proveedores/Editar/{id}(id=${proveedor.id})}">Editar</a> |
+                    <a th:href="@{/proveedores/Eliminar/{id}(id=${proveedor.id})}" 
+                       onclick="return confirm('¿Estás seguro de que deseas eliminar este proveedor?');">Eliminar</a>
+                </td>
+            </tr>
+        </table>
+        <!-- Enlace para añadir un nuevo proveedor -->
+        <a href="/proveedores/Crear">Añadir Proveedor</a>
+    </div>
+</body>
+</html>

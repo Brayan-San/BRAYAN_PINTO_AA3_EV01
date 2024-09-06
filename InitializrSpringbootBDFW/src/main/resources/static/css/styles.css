@@ -1,0 +1,339 @@
+/* General Body Estilos */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Estilo */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Estilo de la tabla */
+table {
+    width: 80%; 
+    margin: 20px auto; 
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ccc; 
+}
+
+table th:last-child, table td:last-child {
+    border-right: none; 
+}
+
+table th {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilos de enlace */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Estilo de los botones */
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Estilo del contenedor */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* Estilo de la etiqueta */
+label {
+    margin-top: 10px;
+}
+
+/* Estilo de los campos de entrada y de los cuadros de selección */
+input, select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 50%; 
+    max-width: 400px; 
+}
+
+/* Botón de formulario */
+form button {
+    width: 150px;
+    margin-top: 20px;
+}
+
+/* Ajustar el ancho de la tabla y del formulario */
+form, table {
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+/* Estilos para los formularios */
+form {
+    display: flex; 
+    flex-direction: column; 
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Estilos para las etiquetas de los formularios */
+label {
+    margin-top: 10px; 
+    font-weight: bold; 
+    font-size: 14px; 
+}
+
+/* Estilos para los campos de entrada de texto y selección */
+input, select {
+    padding: 10px; 
+    margin-top: 5px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+    font-size: 14px; 
+    transition: border 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Efecto al enfocar los campos de entrada */
+input:focus, select:focus {
+    border-color: #4CAF50; 
+    outline: none; 
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); 
+}
+
+/* Estilos para mensajes de error */
+.error {
+    color: #f44336; 
+    margin-top: 5px; 
+    font-size: 13px; 
+}
+
+/* Estilos para mensajes de éxito */
+.success {
+    color: #4CAF50; 
+    margin-top: 5px; 
+    font-size: 13px; 
+}
+
+/*Estilos para Enlaces y Botones dentro de la Tabla*/
+table td a {
+    display: inline-block; 
+    padding: 5px 10px; 
+    margin-right: 5px; 
+    border-radius: 4px; 
+    font-size: 12px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    text-decoration: none; 
+    color: #fff; 
+}
+
+/* Estilos para el enlace de "Editar" */
+table td a[href*="/Editar"] {
+    background-color: #2196F3; 
+}
+
+table td a[href*="/Editar"]:hover {
+    background-color: #0b7dda;
+}
+
+/* Estilos para el enlace de "Eliminar" */
+table td a[href*="/Eliminar"] {
+    background-color: #f44336; 
+}
+
+table td a[href*="/Eliminar"]:hover {
+    background-color: #da190b; 
+}
+
+/* Estilos para el enlace de "Añadir Proveedor" */
+a[href*="/Crear"] {
+    display: inline-block; 
+    background-color: #4CAF50; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    text-align: center;
+    margin-top: 20px; 
+    transition: background-color 0.3s ease; 
+    text-decoration: none;
+}
+
+a[href*="/Crear"]:hover {
+    background-color: #45a049; 
+}
+
+/*Estilos para Botones Generales*/
+button, .btn {
+    background-color: #4CAF50; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 14px; 
+    transition: background-color 0.3s ease; 
+    margin-top: 10px; 
+    margin-right: 5px; 
+}
+
+/* Efecto al pasar el ratón sobre los botones */
+button:hover, .btn:hover {
+    background-color: #45a049; 
+}
+
+/* Botones específicos para acciones */
+.btn-edit {
+    background-color: #2196F3; 
+}
+
+.btn-edit:hover {
+    background-color: #0b7dda; 
+}
+
+.btn-delete {
+    background-color: #f44336; 
+}
+
+.btn-delete:hover {
+    background-color: #da190b; 
+}
+
+.btn-add {
+    background-color: #4CAF50; 
+}
+
+.btn-add:hover {
+    background-color: #45a049;
+}
+
+
+/* Centrar la tabla en la página de listar */
+table {
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* Estilos para los botones y enlaces de acción */
+.action-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para el botón "Añadir Proveedor" */
+a[href*="/Crear"] {
+    background-color: #4CAF50;
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+}
+
+a[href*="/Crear"]:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para el botón "Volver a la Lista" */
+form a[href*="/Listar"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: center; 
+    width: 200px;
+    margin: 20px auto 10px;
+}
+
+form a[href*="/Listar"]:hover {
+    background-color: #d63f3f;
+}
+
+/* Centrar el formulario y ajustar su ancho */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el botón de envío del formulario */
+form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 200px;
+    margin: 20px auto 10px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Diseño adaptable */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+    
+    .action-button,
+    a[href*="/Crear"],
+    form a[href*="/Listar"],
+    form button[type="submit"] {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

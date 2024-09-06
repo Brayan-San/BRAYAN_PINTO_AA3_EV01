@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres del documento como UTF-8 -->
+    <title>Todos los Proveedores</title> <!-- Título de la página -->
+    <link rel="stylesheet" th:href="@{/css/styles.css}"> <!-- Vincula la hoja de estilos CSS externa -->
+</head>
+<body>
+    <h1>Todos los Proveedores</h1> <!-- Encabezado principal de la página -->
+    <table>
+        <thead> <!-- Encabezado de la tabla -->
+            <tr>
+                <!-- Definición de las columnas de la tabla -->
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Dirección</th>
+                <th>Correo</th>
+                <th>Teléfono</th>
+                <th>Tipo de Teléfono</th>
+                <th>Tipo de Producto</th>
+                <th>Nombre del Producto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Itera sobre la lista de proveedores utilizando Thymeleaf -->
+            <tr th:each="proveedor : ${proveedores}">
+                <!-- Muestra los valores de cada propiedad del objeto 'proveedor' en cada columna -->
+                <td th:text="${proveedor.id}">ID</td>
+                <td th:text="${proveedor.nombre}">Nombre</td>
+                <td th:text="${proveedor.direccion}">Dirección</td>
+                <td th:text="${proveedor.correo}">Correo</td>
+                <td th:text="${proveedor.telefono}">Teléfono</td>
+                <td th:text="${proveedor.tipoTelefono}">Tipo de Teléfono</td>
+                <td th:text="${proveedor.tipoProducto}">Tipo de Producto</td>
+                <td th:text="${proveedor.nombreProducto}">Nombre del Producto</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
